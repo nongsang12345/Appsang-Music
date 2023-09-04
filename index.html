@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appsang Music</title>
+  <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/song-8aa42.appspot.com/o/ap488a628-apple-music-logo-apple-music-user-guide-for-music-apple-com-apple-support-am.png?alt=media&token=4880bd2d-9499-406e-a07a-f6acb1d33da7" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    
+    .music-logo-container {
+      display: flex;
+      align-items: center;
+      margin-top: 20px; 
+      font-weight: bold;
+      letter-spacing: 4px; 
+    }
+
+    .music-logo {
+      width: 50px; 
+      height: 50px; 
+      margin-right: 10px; 
+    }
+
+    
+    .music-text {
+      font-size: 2rem; 
+      color: #000000; 
+      text-transform: uppercase;
+      margin-right: 5px; 
+      font-weight: bold;
+      letter-spacing: 2px; 
+      line-height: 1; 
+    }
+  </style>
+</head>
+<body>
+  <div class="player">
+   
+    <div class="music-logo-container">
+      <img src="https://firebasestorage.googleapis.com/v0/b/song-8aa42.appspot.com/o/ap488a628-apple-music-logo-apple-music-user-guide-for-music-apple-com-apple-support-am.png?alt=media&token=4880bd2d-9499-406e-a07a-f6acb1d33da7" 
+      alt="Your Logo" class="music-logo">
+      <div class="music-text">Appsang Music</div>
+    </div>
+
+  
+    <div class="details">
+      <div class="now-playing">PLAYING x OF y</div>
+      <div class="track-art"></div>
+      <div class="track-name">Track Name</div>
+      <div class="track-artist">Track Artist</div>
+    </div>
+    <div class="buttons">
+      <div class="prev-track" onclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i></div>
+      <div class="playpause-track" onclick="playpauseTrack()"><i class="fa fa-play-circle fa-5x"></i></div>
+      <div class="next-track" onclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i></div>
+    </div>
+    <div class="slider_container">
+      <div class="current-time">00:00</div>
+      <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+      <div class="total-duration">00:00</div>
+    </div>
+    <div class="slider_container">
+      <i class="fa fa-volume-down"></i>
+      <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+      <i class="fa fa-volume-up"></i>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
